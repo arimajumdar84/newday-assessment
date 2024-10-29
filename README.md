@@ -1,2 +1,11 @@
-# newday-assessment
-NewDay Coding Assessment
+Diamond Kata
+
+============
+
+This solution was built as a part of code assessment for NewDay. 
+
+Prerequisites:
+
+- Java 20
+- Gradle
+
