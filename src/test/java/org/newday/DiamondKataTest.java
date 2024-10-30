@@ -19,6 +19,12 @@ public class DiamondKataTest {
     void should_throw_exception_for_invalid_inputs(){
         assertThatThrownBy(() -> diamondKata.printDiamondPattern('1')).isInstanceOf(IllegalArgumentException.class);
     }
+    @Test
+    void should_throw_exception_with_valid_message_for_invalid_inputs(){
+        assertThatThrownBy(() -> diamondKata.printDiamondPattern('1'))
+                .isInstanceOf(IllegalArgumentException.class)
+                .hasMessage("Input must be a letter");
+    }
 
     @Test
     void should_create_diamond_with_inputA() {
