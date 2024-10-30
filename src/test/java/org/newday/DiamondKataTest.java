@@ -41,5 +41,18 @@ public class DiamondKataTest {
                         """;
         assertThat(expected).isEqualTo(diamondKata.printDiamondPattern('B'));
     }
+    @Test
+    void should_create_diamond_with_inputC() {
+        diamondKata = new DiamondKata();
+        String expected =
+                """
+                          A \s
+                         B B\s
+                        C   C
+                         B B\s
+                          A \s
+                        """;
+        assertThat(expected).isEqualTo(diamondKata.printDiamondPattern('C'));
+    }
 
 }
