@@ -9,3 +9,6 @@ Prerequisites:
 - Java 20
 - Gradle
 
+Running instructions:
+
+`./gradlew test`
