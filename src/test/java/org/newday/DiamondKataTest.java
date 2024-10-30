@@ -42,6 +42,17 @@ public class DiamondKataTest {
         assertThat(expected).isEqualTo(diamondKata.printDiamondPattern('B'));
     }
     @Test
+    void should_create_diamond_with_inputb_withLowerCase() {
+        diamondKata = new DiamondKata();
+        String expected =
+                """
+                         A\s
+                        B B
+                         A\s
+                        """;
+        assertThat(expected).isEqualTo(diamondKata.printDiamondPattern('b'));
+    }
+    @Test
     void should_create_diamond_with_inputC() {
         diamondKata = new DiamondKata();
         String expected =

@@ -3,6 +3,7 @@ package org.newday;
 public class DiamondKata {
 
     public String printDiamondPattern(char midpoint) {
+        midpoint = Character.toUpperCase(midpoint);
         validateInput(midpoint);
 
         int n = midpoint - 'A';
@@ -29,7 +30,7 @@ public class DiamondKata {
     }
 
     private void validateInput(char midpoint) {
-        if (!Character.isLetter(midpoint)) {
+        if (!Character.isLetter(midpoint) || midpoint < 'A' || midpoint > 'Z') {
             throw new IllegalArgumentException("Input must be a letter");
         }
     }
