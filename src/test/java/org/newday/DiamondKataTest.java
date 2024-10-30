@@ -25,12 +25,21 @@ public class DiamondKataTest {
                 .isInstanceOf(IllegalArgumentException.class)
                 .hasMessage("Input must be a letter");
     }
-
     @Test
     void should_create_diamond_with_inputA() {
         String expected = "A\n";
         assertThat(expected).isEqualTo(diamondKata.printDiamondPattern('A'));
     }
-
+    @Test
+    void should_create_diamond_with_inputB() {
+        diamondKata = new DiamondKata();
+        String expected =
+                """
+                         A\s
+                        B B
+                         A\s
+                        """;
+        assertThat(expected).isEqualTo(diamondKata.printDiamondPattern('B'));
+    }
 
 }
